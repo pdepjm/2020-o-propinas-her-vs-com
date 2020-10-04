@@ -1,0 +1,4 @@
+import composicion.*
+test "test composicion" {
+	var nicoCompuesto = new Cliente(propina=comun)
+}
