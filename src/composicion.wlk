@@ -11,7 +11,7 @@ object comun {
 }
 class Bolsillo { 
 	var valor 
-	method monto(costoBase) = valor.min(costoBase)
+	method monto(costoBase) = valor.min(costoBase * 0.2)
 }
 object amarrete { 
 	method monto(costoBase) = 0
@@ -22,10 +22,8 @@ object amarrete {
 // comparar ambas cosas con los anteojos de la simplicidad y de la flexibilidad
 // a.k.a cambiar de clase, multiple subclasificacion???? (el famoso "la herencia
 // es un arma de un solo tiro"), 
-// taxonomía, naturaleza, escencia vs compartir código
+// taxonomía, naturaleza, esencia vs compartir código
 // si yo heredo estoy acoplado x
-
-// 
 
 object abuelita {
 	var property nieto 

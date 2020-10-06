@@ -1,23 +1,23 @@
-import composicion.*
+import herencia.*
 
 describe "propinas" {
 	test "un cliente común paga un 10% de propina" {
-		var clienteComun = new Cliente(propina=comun)
+		var clienteComun = new ClienteComun()
 		assert.equals(1100, clienteComun.cuantoPaga(1000))
 	}
 	
 	test "un cliente amarrete no da propina" {
-		var clienteAmarrete = new Cliente(propina=amarrete)
+		var clienteAmarrete = new ClienteAmarrete()
 		assert.equals(1000, clienteAmarrete.cuantoPaga(1000))
 	}
 	
 	test "un cliente con suficiente plata en el bolsillo paga un 20% de propina" {
-		var clienteConBolsillo = new Cliente(propina=new Bolsillo(valor=1200))
-		assert.equals(1200, clienteConBolsillo.cuantoPaga(1000))
+		var clienteAmarrete = new ClienteConBolsillo(valorBolsillo=1200)
+		assert.equals(1200, clienteAmarrete.cuantoPaga(1000))
 	}
 	
 	test "un cliente sin suficiente plata en el bolsillo para pagar el 20% da todo lo que tiene en el bolsillo como propina" {
-		var clienteConBolsillo = new Cliente(propina=new Bolsillo(valor=10))
-		assert.equals(1010, clienteConBolsillo.cuantoPaga(1000))
+		var clienteAmarrete = new ClienteConBolsillo(valorBolsillo=10)
+		assert.equals(1010, clienteAmarrete.cuantoPaga(1000))
 	}
 }
