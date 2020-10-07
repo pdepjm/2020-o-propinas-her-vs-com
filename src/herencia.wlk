@@ -4,14 +4,14 @@ class Cliente {
 }
 
 class ClienteComun inherits Cliente { 
-	method montoPropina(costoBase) = costoBase * 0.1
+	override method montoPropina(costoBase) = costoBase * 0.1
 }
-class ClienteConBolsillo inherits Cliente { 
-	var valorBolsillo 
-	method montoPropina(costoBase) = valorBolsillo.min(costoBase * 0.2)
+class ClienteComedido inherits Cliente { 
+	var montoMaximo 
+	override method montoPropina(costoBase) = montoMaximo.min(costoBase * 0.2)
 }
 class ClienteAmarrete inherits Cliente {
-	method montoPropina(costoBase) = 0
+	override method montoPropina(costoBase) = 0
 }
 
 

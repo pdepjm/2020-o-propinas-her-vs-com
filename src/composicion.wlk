@@ -9,9 +9,9 @@ class Cliente {
 object comun {
 	method monto(costoBase) = costoBase * 0.1
 }
-class Bolsillo { 
-	var valor 
-	method monto(costoBase) = valor.min(costoBase * 0.2)
+class Comedido { 
+	var montoMaximo 
+	method monto(costoBase) = montoMaximo.min(costoBase * 0.2)
 }
 object amarrete { 
 	method monto(costoBase) = 0
@@ -31,4 +31,12 @@ object abuelita {
 
 object rasta {
 	var property pollo
+}
+
+// ¡Reificar los criterios de propinas como objetos nos permite componerlos fácilmente!
+object bipolar {
+	method monto(costoBase) {
+		const criterio = if (1.randomUpTo(10) > 5) comun else amarrete
+		return criterio.monto(costoBase)
+	}
 }
