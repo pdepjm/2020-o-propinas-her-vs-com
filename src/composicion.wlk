@@ -1,4 +1,5 @@
 class Cliente {
+	var salarioMensual = 24000
 	var propina
 	method cuantoPaga(costoBase) = costoBase + propina.monto(costoBase)
 	method propina(propi){
@@ -17,13 +18,25 @@ object amarrete {
 	method monto(costoBase) = 0
 }
 
-// estatico, dinamico, codigo, instanciación
 
-// comparar ambas cosas con los anteojos de la simplicidad y de la flexibilidad
-// a.k.a cambiar de clase, multiple subclasificacion???? (el famoso "la herencia
-// es un arma de un solo tiro"), 
-// taxonomía, naturaleza, esencia vs compartir código
-// si yo heredo estoy acoplado x
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+object desinteresado {
+	method monto(costoBase, sueldo) = sueldo * 0.01 
+}
+ */
 
 object abuelita {
 	var property nieto 

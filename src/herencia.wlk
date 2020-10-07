@@ -1,4 +1,5 @@
 class Cliente {
+	var salarioMensual = 24000
 	method cuantoPaga(costoBase) = costoBase + self.montoPropina(costoBase) 
 	method montoPropina(costoBase)
 }
@@ -17,6 +18,27 @@ class ClienteAmarrete inherits Cliente {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+class ClienteCopion inherits Cliente {
+	override method montoPropina(costoBase) = sueldoMensual * 0.01
+}
+
+ */
 
 
 object abuelita {
