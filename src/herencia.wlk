@@ -34,8 +34,8 @@ class ClienteAmarrete inherits Cliente {
 
 
 /*
-class ClienteCopion inherits Cliente {
-	override method montoPropina(costoBase) = sueldoMensual * 0.01
+class ClienteDesinteresado inherits Cliente {
+	override method montoPropina(costoBase) = salarioMensual * 0.01
 }
 
  */
